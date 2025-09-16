@@ -92,11 +92,6 @@ Change default models in:
 - `src/rag/llm.py`: `model`, `system_prompt`
 
 
-## 📝 Notes
-
-- The reranker is loaded lazily to save startup time and memory.
-- Vector index persists under `./vectordb`.
-- Sample dataset is `data/cat-facts.txt`. 
 
 ## 📸 Screenshots
 ![RAG Flow](assets/answer.png)
