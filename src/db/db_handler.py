@@ -4,6 +4,7 @@ from vectordb import HNSWVectorDB
 
 from src.rag.embedding import EMB_DIM, embed_text
 from src.data.dataio import read_data
+from src.rag.rerank import rerank
 
 
 class TextDoc(BaseDoc):
@@ -28,12 +29,15 @@ class TextDB:
             vec = embed_text(text)
             self.db.index(TextDoc(id=f"{file_path}:{idx}", text=text, embedding=vec))
 
-    def search(self, query: str, k: int = 5):
+    def search(self, query: str, k: int = 50):
         vec = embed_text(query)
         return self.db.search(TextDoc(text=query, embedding=vec), limit=k)
 
-    def search_texts(self, query: str, k: int = 5) -> list[str]:
+    def search_texts(self, query: str, k: int = 50) -> list[str]:
         res = self.search(query, k=k)
         candidate = res[0] if isinstance(res, (list, tuple)) and res else res
         matches = getattr(candidate, "matches", [])
         return [m.text for m in matches][:k]
+
+    def rerank_texts(self, query: str, texts: list[str], k: int = 5) -> list[str]:
+        return rerank(query, texts)[:k]

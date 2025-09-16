@@ -8,14 +8,16 @@ def main():
 
     query_1 = "How much time does a cat sleep?"
     query_2 = "What birds and cat have in common?"
-    ctx_texts = db.search_texts(query_1, k=4)
-    context = "\n\n".join(ctx_texts)
+    ctx_texts = db.search_texts(query_1, k=40)
+    ranked_texts = db.rerank_texts(query_1, ctx_texts, k=44)
+    context = "\n\n".join(ranked_texts)
     response = generate_answer(query=query_1, context=context)
     print(f"Query 1: {query_1}")
     print(f"Context: {context}")
     print(f"Response: {response}")
-    ctx_texts = db.search_texts(query_2, k=4)
-    context = "\n\n".join(ctx_texts)
+    ctx_texts = db.search_texts(query_2, k=40)
+    ranked_texts = db.rerank_texts(query_2, ctx_texts, k=4)
+    context = "\n\n".join(ranked_texts)
     response = generate_answer(query=query_2, context=context)
     print("\n\n")
     print(f"Query 2: {query_2}")
