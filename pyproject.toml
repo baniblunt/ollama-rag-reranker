@@ -1,0 +1,14 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "docarray>=0.40.0",
+    "numpy>=1.26",
+    "ollama>=0.5.3",
+    "pre-commit>=4.3.0",
+    "setuptools>=68",
+    "vectordb>=0.0.21",
+]
