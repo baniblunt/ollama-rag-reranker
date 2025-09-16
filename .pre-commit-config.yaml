@@ -21,3 +21,4 @@ repos:
           - ollama==0.5.3
           - docarray==0.41.0
           - vectordb==0.0.21
+          - flagembedding==1.3.5
